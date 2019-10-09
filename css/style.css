@@ -1,0 +1,30 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/*.content-text {
+  background: url(../images/bg-pattern-desktop.svg);
+}*/
+
+.form-email {
+  margin-bottom: 60px;
+}
+
+.error-icon {
+  display: none;
+}
+
+.error-icon.visible {
+  display: inline;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-message.active {
+  padding: 0.3em;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
