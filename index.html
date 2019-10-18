@@ -14,33 +14,31 @@
 <body>
 
   <div class="container">
-
     <header class="padding">
       <div id="logo">
         <a href="#"><img src="./images/logo.svg"></a>
       </div>
     </header>
-    <main class="content-main">
-      <section class="content-image">
+    <section class="content-signup padding">
+      <h1 class="main-title"><span>We're</span> coming soon</h1>
+      <p class="lead-text">Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form novalidate>
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email Address">
+          <span class="error-icon"><img src="./images/icon-error.svg"></span>
+          <button class="btn-submit"><img src="./images/icon-arrow.svg"></button>
+          <p class="error-message" aria-live="polite"></p>
+      </form>
+  </section>
+  <div class="image-wrapper">
+    <section class="content-image">
       <picture>
         <source srcset="./images/hero-desktop.jpg" media="(min-width: 375px)">
         <img src="./images/hero-mobile.jpg" />
       </picture>
-      </section> <!-- content-image -->
-      <section class="content-signup padding">
-        <h1 class="main-title"><span>We're</span> coming soon</h1>
-        <p class="lead-text">Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form novalidate>
-            <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email Address">
-            <span class="error-icon"><img src="./images/icon-error.svg"></span>
-            <button class="btn-submit"><img src="./images/icon-arrow.svg"></button>
-            <p class="error-message" aria-live="polite"></p>
-        </form>
-      </section> <!-- content-text -->
-    </main>
-
+    </section>
+  </div>
   </div>
   <footer class="padding">
     <p class="attribution">
