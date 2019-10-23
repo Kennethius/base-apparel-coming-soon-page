@@ -11,25 +11,19 @@ imput, button {
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
-}
-
-.padding {
-  padding: 40px;
-}
-
-.container {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
-.image-wrapper {
-  box-sizing: border-box;
+header, .content-image {
+  flex: 1 0 50%;
 }
 
 .content-signup {
-  order: 1;
+  flex: 1 0 50%;
+  /*background-image: url('../images/bg-pattern-desktop.svg');
+  background-repeat: no-repeat;*/
 }
 
 .main-title {
@@ -54,14 +48,14 @@ form {
   position: relative;
 }
 
-#email {
+input[type="email"] {
   width: 100%;
   border: 1px solid hsl(0, 36%, 70%);
   padding: 15px 0 15px 25px;
   border-radius: 25px;
 }
 
-#email::placeholder {
+input[type="email"]::placeholder {
   color: hsl(0, 36%, 70%);
 }
 
@@ -98,80 +92,3 @@ form {
 .attribution a {
   color: hsl(0, 36%, 70%);
 }
-
-/* Media Queries */
-
-@media (min-width: 768px) {
-
-  .container {
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-  }
-
-  .padding {
-    padding: 40px 10%;
-  }
-
-  .main-title {
-    font-size: 80px;
-  }
-
-  .lead-text {
-    padding-right: 20px;
-  }
-  .content-signup {
-    background-image: url('../images/bg-pattern-desktop.svg');
-    background-repeat: no-repeat;
-    order: 0;
-  }
-
-  header, .content-signup {
-    width: 60%;
-  }
-
-  .image-wrapper {
-    /*display: flex;
-    align-items: flex-end;
-    oder: -1;
-    height: 100vh;*/
-    display: flex;
-    flex-direction: column-reverse;
-    width: 20%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
-
-
-/* Media Queries */
-
-/*@media (min-width: 768px) {
-
-  .container {
-    background-image: url('../images/bg-pattern-desktop.svg');
-    background-repeat: no-repeat;
-  }
-
-  header {
-    flex-grow: 2;
-    flex-basis: 30%;
-  }
-
-  .content-signup {
-    order: 0;
-    flex-grow: 2;
-    flex-basis: 30%;
-  }
-
-  .image-wrapper {
-    flex-grow: 1;
-    flex-basis: 10%;
-    display: flex;
-    flex-direction: column-reverse;
-    height: 100vh;
-  }
-}*/
