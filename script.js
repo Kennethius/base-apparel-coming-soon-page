@@ -15,6 +15,7 @@ form.addEventListener("submit", function(event) {
     errorMessage.textContent = "Please enter valid email";
     errorMessage.className = "error-message active";
     errorIcon.className = "error-icon visible";
+    email.className = "email error"
     event.preventDefault();
   }
 }, false);

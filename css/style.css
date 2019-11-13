@@ -4,26 +4,22 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 imput, button {
   border: 0;
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-  display: flex;
-  flex-wrap: wrap;
 }
 
-header, .content-image {
-  flex: 1 0 50%;
-}
-
-.content-signup {
-  flex: 1 0 50%;
-  /*background-image: url('../images/bg-pattern-desktop.svg');
-  background-repeat: no-repeat;*/
+.form-signup {
 }
 
 .main-title {
@@ -39,33 +35,48 @@ header, .content-image {
 }
 
 .lead-text {
-  line-height: 1.8;
+  line-height: 1.9;
   color: hsl(0, 36%, 70%);
 }
 
 form {
-  display: flex;
-  position: relative;
+  /*display: flex;
+  position: relative;*/
+  display: grid;
+    grid-template-columns: 68% 10% 102.83px;
+    grid-template-rows: 1fr 1fr;
 }
 
 input[type="email"] {
   width: 100%;
   border: 1px solid hsl(0, 36%, 70%);
-  padding: 15px 0 15px 25px;
-  border-radius: 25px;
+  padding: 17px 0 17px 30px;
+  border-radius: 35px;
+  grid-column: 1/4;
+  grid-row: 1/2;
 }
 
 input[type="email"]::placeholder {
   color: hsl(0, 36%, 70%);
 }
 
+input[type="email"].error {
+  border: 2px solid hsl(0, 93%, 68%);
+}
+
 .btn-submit {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  padding: 11px 25px;
-  border-radius: 25px;
-  position: absolute;
+  padding: 0;
+  border-radius: 35px;
+  grid-column: 3/4;
+  grid-row: 1;
+  /*position: absolute;
   right: 0px;
-  top: 0px;
+  top: 0px;*/
+}
+
+input[type="email"], .btn-submit:focus {
+  outline: none;
 }
 
 .error-icon {
@@ -74,21 +85,132 @@ input[type="email"]::placeholder {
 
 .error-icon.visible {
   display: inline;
+  grid-column: 2/3;
+  grid-row: 1;
+  align-self: center;
+}
+
+.error-icon img {
+  vertical-align: middle;
 }
 
 .error-message {
-  color: red;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  color: hsl(0, 93%, 68%);
 }
 
 .error-message.active {
-  padding: 0.3em;
-  display: block;
+  /*padding: 0.3em;*/
+  padding-left: 30px;
 }
 
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 11px;
 }
 
 .attribution a {
   color: hsl(0, 36%, 70%);
 }
+
+
+
+@media (min-width: 768px) {
+
+  .main-title {
+    font-size: 70px;
+    letter-spacing: 10px;
+  }
+
+/* CSS grid styles */
+
+  .container {
+    display: grid;
+    grid-template-columns: 57.7% 42.3%;
+
+    grid-template-rows: repeat(6, 1fr);
+    height: 800px;
+  }
+
+  header {
+    grid-column: 1 / 2;
+    grid-row: 1 /2;
+    margin: 60px 0;
+  }
+
+  main {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    padding-right: 26%;
+  }
+
+  .form-signup {
+  }
+
+  .main-title {
+    margin-bottom: 0.2em;
+  }
+
+  .lead-text {
+    margin-bottom: 3em;
+  }
+
+  .content-image {
+    grid-column: 2;
+    grid-row: 1 / 6;
+  }
+
+  footer {
+    grid-column: 1 / 2;
+    grid-row: 6;
+    align-self: end;
+  }
+
+  header, main, footer {
+    padding-left: 19%;
+  }
+
+  header {
+    margin-top: 60px;
+  }
+
+}
+
+/* Flexbox Styles */
+
+/*@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .content-image {
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+
+  header, .content-signup {
+    display: flex;
+  }
+
+  .logo, .form-signup {
+    flex: 0 0 50%;
+  }
+
+  footer {
+     display: flex;
+  }
+
+}
+
+/*.content-image {
+  order: 0;
+}
+
+.content-signup, footer {
+  order: 1;
+}*/
