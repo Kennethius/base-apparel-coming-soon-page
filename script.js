@@ -10,6 +10,7 @@ email.addEventListener("input", function() {
     errorIcon.className = "error-icon";
   }
 }, false);
+
 form.addEventListener("submit", function(event) {
   if(!email.validity.valid || email.value == "") {
     errorMessage.textContent = "Please enter valid email";
