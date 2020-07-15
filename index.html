@@ -17,18 +17,22 @@
         <a href="#" id="logo"><img src="./images/logo.svg"></a>
       </div>
     </header>
-
-    <picture class="hero-image">
-      <source srcset="./images/hero-desktop.jpg" media="(min-width: 376px)">
-      <img class="hero-mobile" src="./images/hero-mobile.jpg" />
-    </picture> <!-- .hero-image -->
+    <section class="hero-image">
+      <picture>
+        <source srcset="./images/hero-desktop.jpg" media="(min-width: 376px)">
+        <img class="hero-mobile" src="./images/hero-mobile.jpg" />
+      </picture>
+  </section> <!-- .hero-image -->
 
     <main>
-      <section class="intro section-center">
+      <section class="form-intro">
+        <div class="intro-text">
 
         <h1 class="title"><span>We're</span> coming soon</h1>
         <p class="description">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        
+      </div> <!-- .intro-text -->
 
         <form class="signup-form" novalidate>
             <label for="email"></label>
