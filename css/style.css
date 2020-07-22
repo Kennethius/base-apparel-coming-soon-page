@@ -19,20 +19,28 @@ body {
 
 .container {
   overflow: hidden;
+  padding: 0 3rem;
 }
 
-header, main, footer {
+/*header, main, footer {
   padding-left: 3rem;
   padding-right: 3rem;
-}
+}*/
 
 header {
  padding-top: 4.2rem;
  padding-bottom: 4.2rem;
 }
 
+#logo img {
+  width: 10rem;
+}
+
 .hero-image {
   margin-bottom: 6.6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  width: calc(100% + 6rem);
 }
 
 .form-intro .intro-text {
@@ -83,15 +91,21 @@ input[type="email"].error {
 
 .btn-submit {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 2px 4px 10px hsla(0, 36%, 70%, 0.5);
   padding: 0;
   border-radius: 35px;
   grid-column: 3/4;
   grid-row: 1/2;
+  cursor: pointer;
 }
 
-input[type="email"], .btn-submit:focus {
-  outline: none;
+.btn-submit:hover {
+  opacity: 0.75;
 }
+
+/*input[type="email"], .btn-submit:focus {
+  outline: none;
+}*/
 
 .error-icon {
   display: none;
@@ -112,10 +126,10 @@ input[type="email"], .btn-submit:focus {
   grid-column: 1/2;
   grid-row: 2/3;
   color: hsl(0, 93%, 68%);
+  padding-left: 30px;
 }
 
 .error-message.active {
-  padding-left: 30px;
 }
 
 .attribution {
@@ -144,10 +158,16 @@ input[type="email"], .btn-submit:focus {
       grid-template-columns: 57.7% 42.3%;
       grid-template-rows: 1fr 4fr 1fr;
       height: 800px;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0 auto;
+
     }
 
     header, main, footer {
-      padding-left: 8rem;
+      max-width: 65rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
 
     header {
@@ -156,9 +176,15 @@ input[type="email"], .btn-submit:focus {
       padding-top: 6.4rem;
     }
 
+    #logo img {
+      width: 16rem;
+    }
+
     .hero-image {
       grid-column: 2;
       grid-row: 1 / 4;
+      margin: 0;
+      width: 100%;
     }
 
     main {
@@ -166,11 +192,16 @@ input[type="email"], .btn-submit:focus {
       grid-row: 2/3;
       display: flex;
       align-items: center;
-      max-width: 40rem;
+      /*max-width: 65rem;*/
     }
 
     .form-intro .intro-text {
       text-align: left;
+    }
+
+    .title {
+      font-size: 5rem;
+      letter-spacing: 10px;
     }
 
     footer {
@@ -191,23 +222,23 @@ input[type="email"], .btn-submit:focus {
 
   @media (min-width: 1024px) {
 
-  header, main, footer {
-    padding-left: 12rem;
-  }
+    header, main, footer {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
 
-  main {
-    max-width: 50rem;
-  }
-
-  .title {
-    font-size: 7rem;
-    letter-spacing: 10px;
-  }
+    .title {
+      font-size: 7rem;
+    }
 }
 
 @media (min-width: 1440px) {
 
   header, main, footer {
-    padding-left: 16rem;
+    padding-left: 16.4rem;
+  }
+
+  main {
+    max-width: 70rem;
   }
 }
