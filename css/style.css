@@ -153,10 +153,9 @@ input[type="email"] {
   vertical-align: middle;
 }
 
-.error-message {
+.validation-message {
   grid-column: 1/2;
   grid-row: 2/3;
-  color: hsl(0, 93%, 68%);
   padding-left: 30px;
 }
 
