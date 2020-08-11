@@ -200,10 +200,6 @@ input[type="email"] {
     width: calc(100% - 8rem);
   }
 
-  main {
-    margin-top: 3.541rem;
-  }
-
   header {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
