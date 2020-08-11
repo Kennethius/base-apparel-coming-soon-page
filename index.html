@@ -13,14 +13,14 @@
 
     <header>
       <div class="logo">
-        <a href="#" id="logo"><img src="./images/logo.svg"></a>
+        <a href="#" id="logo"><img src="./images/logo.svg" alt="Site logo"></a>
       </div>
     </header>
 
     <section class="hero-image">
       <picture>
         <source srcset="./images/hero-desktop.jpg" media="(min-width: 376px)">
-        <img class="hero-mobile" src="./images/hero-mobile.jpg" />
+        <img class="hero-mobile" src="./images/hero-mobile.jpg"  alt="Hero image for mobile"/>
       </picture>
   </section> <!-- .hero-image -->
 
@@ -44,8 +44,8 @@
         <form class="signup-form" novalidate>
             <label for="email"></label>
             <input type="email" name="email" id="email" placeholder="Email Address">
-            <span class="error-icon"><img src="./images/icon-error.svg"></span>
-            <button class="btn-submit"><img src="./images/icon-arrow.svg"></button>
+            <span class="error-icon"><img src="./images/icon-error.svg" alt="Form validation error icon"></span>
+            <button class="btn-submit" aria-label="Submit form"><img src="./images/icon-arrow.svg" alt="Form submit button arrow icon"></button>
             <p class="validation-message"></p>
         </form>
 
@@ -62,7 +62,7 @@
  </div> <!-- .container -->
 
   <!-- javascript -->
-  <script type="text/javascript" src="script.js"></script>
+  <script src="script.js"></script>
 
   </body>
 </html>

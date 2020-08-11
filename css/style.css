@@ -89,6 +89,7 @@ input[type="email"] {
   border-radius: 35px;
   grid-column: 1/4;
   grid-row: 1/2;
+  background: transparent;
 }
 
 #email::placeholder {
@@ -197,6 +198,10 @@ input[type="email"] {
   header, main, footer {
     max-width: 45rem;
     width: calc(100% - 8rem);
+  }
+
+  main {
+    margin-top: 5.041rem;
   }
 
   header {
